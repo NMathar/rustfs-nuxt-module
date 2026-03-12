@@ -16,7 +16,6 @@ modules/nuxt-rustfs/          # custom RustFS integration module
   ├─ runtime/                 # composables, plugins, server utilities
   └─ README.md                # module-specific documentation
 pages/                         # example pages
-server/                        # sample API routes
 RUSTFS_MODULE_GUIDE.md        # internal notes and guide
 ```
 
