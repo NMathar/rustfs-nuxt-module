@@ -1,0 +1,23 @@
+services:
+  rustfs:
+    image: rustfs/rustfs:latest   # oder z.B. rustfs/rustfs:main-latest / v1.0.0
+    container_name: rustfs
+    restart: unless-stopped
+
+    ports:
+      - "9000:9000"               # entspricht: -p 9000:9000
+      - "9001:9001"               # entspricht: -p 9001:9001
+
+    environment:
+      - RUSTFS_ACCESS_KEY=rustfsadmin \
+      - RUSTFS_SECRET_KEY=rustfsadmin \
+      - RUSTFS_CONSOLE_ENABLE=true \
+      #- RUSTFS_SERVER_DOMAINS=example.com \
+
+    volumes:
+      # Persistentes Docker-Volume für /data im Container
+      - rustfs-data:/data         # entspricht: -v /data:/data (nur "rechte Seite")
+
+volumes:
+  rustfs-data:
+    driver: local

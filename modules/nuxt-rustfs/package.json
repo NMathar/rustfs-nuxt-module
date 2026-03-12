@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-rustfs",
+  "version": "1.0.0",
+  "description": "Nuxt module for rustfs integration with TypeScript SDK wrapper",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./module.ts"
+    }
+  },
+  "main": "./module.ts",
+  "files": [
+    "module.ts",
+    "runtime"
+  ],
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.682.0",
+    "@nuxt/kit": "^3.13.0"
+  },
+  "peerDependencies": {
+    "nuxt": "^3.0.0 || ^4.0.0"
+  }
+}
